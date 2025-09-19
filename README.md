@@ -140,30 +140,7 @@ java rmi.student.ClientGUI
 
 ---
 
-## 6. Cấu trúc mã nguồn
-
-```
-project_root/
-├── rmi/
-│   └── student/
-│       ├── ServerMain.java         # Khởi động Server
-│       ├── StudentManager.java     # Interface RMI
-│       ├── StudentManagerImpl.java # Implement RMI, quản lý dữ liệu CSV
-│       ├── Student.java            # Model Sinh viên (với điểm số)
-│       └── ClientGUI.java          # Giao diện Client Swing
-│       └── students.csv          # File lưu dữ liệu (tạo tự động)
-└── README.md               # Tài liệu này
-```
-
-- **Student.java**: Lớp model với thông tin sinh viên và điểm (Toán, Văn, Anh).
-- **StudentManager**: Interface định nghĩa phương thức RMI (add, update, delete, get).
-- **StudentManagerImpl**: Triển khai lưu trữ HashMap và CSV.
-- **ServerMain**: Đăng ký RMI.
-- **ClientGUI**: Giao diện với JTabbedPane, JTable, dialog form.
-
----
-
-## 7. Liên hệ
+## 6. Liên hệ
 - Email: phamtrongtoank4@gmail.com
 
 ---
