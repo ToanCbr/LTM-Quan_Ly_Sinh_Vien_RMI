@@ -164,10 +164,10 @@ project_root/
 ---
 
 ## 7. Liên hệ
-- Email: nguyenconguan04@gmail.com
+- Email: phamtrongtoank4@gmail.com
 
 ---
 
 <div align="center">
-    <p>Developed by [Nguyen Cong Uan] - Faculty of Information Technology, DaiNam University</p>
+    <p>Developed by [Pham Trong Toan] - Faculty of Information Technology, DaiNam University</p>
 </div>
