@@ -4,13 +4,13 @@
     </a>
 </h2>
 <h2 align="center">
-   QUẢN LÍ SINH VIÊN BẰNG RMI
+   QUẢN LÝ SINH VIÊN BẰNG RMI
 </h2>
 <div align="center">
     <p align="center">
-        <img src="docs/aiotlab_logo.png" alt="AIoTLab Logo" width="170"/>
-        <img src="docs/fitdnu_logo.png" alt="AIoTLab Logo" width="180"/>
-        <img src="docs/dnu_logo.png" alt="DaiNam University Logo" width="200"/>
+        <img src="Images/aiotlab_logo.png" alt="AIoTLab Logo" width="170"/>
+        <img src="Images/fitdnu_logo.png" alt="AIoTLab Logo" width="180"/>
+        <img src="Images/dnu_logo.png" alt="DaiNam University Logo" width="200"/>
     </p>
 
 [![AIoTLab](https://img.shields.io/badge/AIoTLab-green?style=for-the-badge)](https://www.facebook.com/DNUAIoTLab)
@@ -19,62 +19,155 @@
 
 </div>
 
-## 📖 1. Giới thiệu
-Đề tài “Quản lý sinh viên bằng RMI” được xây dựng nhằm áp dụng công nghệ Java RMI (Remote Method Invocation) trong lập trình phân tán. Hệ thống hoạt động theo mô hình Client–Server, trong đó server quản lý dữ liệu sinh viên và cung cấp các chức năng thêm, sửa, xóa, tìm kiếm; còn client kết nối từ xa để gọi các phương thức thông qua giao thức JRMP trên TCP/IP. Đề tài giúp hiểu rõ cách truyền đối tượng qua mạng bằng RMI, đồng thời rèn luyện kỹ năng lập trình hướng đối tượng và xây dựng ứng dụng quản lý đơn giản nhưng mang tính phân tán.
-## 🔧 2. Công nghệ sử dụng
-- Java  
-- Java RMI (Remote Method Invocation)  
-- Giao diện Client viết bằng Java Swing  
-- Dữ liệu lưu trữ tạm thời bằng danh sách (List), có thể mở rộng sang File/Database  
+## 1. Giới thiệu hệ thống
+Ứng dụng **Quản lý Sinh viên** được xây dựng dựa trên công nghệ **Java RMI** cho phép **Client** (Java Swing) và **Server** (RMI Service) trao đổi dữ liệu qua mạng.  
+- **Server** chịu trách nhiệm quản lý dữ liệu sinh viên (thêm, sửa, xóa, tìm kiếm, hiển thị danh sách).  
+- **Client** cung cấp giao diện trực quan cho người dùng thực hiện các chức năng quản lý.  
+- Dữ liệu được lưu trữ trên **File CSV** tại Server, với hỗ trợ quản lý điểm số (Toán, Văn, Anh).  
 
-## 🚀 3. Chức năng chính
-- **Thêm sinh viên mới**
+Ứng dụng phù hợp cho việc học tập, nghiên cứu lập trình mạng và phân tán trong Java. Giao diện được chia thành hai tab: Quản lý Sinh viên và Quản lý Điểm, với chức năng tìm kiếm và menu hành động (Xem chi tiết, Sửa, Xóa) cho từng sinh viên.
 
-  <img width="600" height="350" alt="image" src="https://github.com/user-attachments/assets/4b4dc571-0b31-4944-8227-b8e685957391" />
+---
 
-- **Cập nhật thông tin sinh viên**
+## 2. Công nghệ sử dụng
+- **Ngôn ngữ lập trình:** Java 8+  
+- **Giao diện:** Java Swing  
+- **Truyền thông mạng:** Java RMI (Remote Method Invocation)  
+- **Lưu trữ dữ liệu:**  
+  - File CSV (students.csv) để lưu thông tin sinh viên và điểm số  
+- **Công cụ phát triển:** IntelliJ IDEA / Eclipse / NetBeans  
 
-  <img width="600" height="350" alt="image" src="https://github.com/user-attachments/assets/593735fc-3433-41aa-9393-ed040cd3b81c" />
+<p align="center">
+  <a href="https://www.java.com/"><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"></a>
+  <a href="https://docs.oracle.com/javase/tutorial/uiswing/"><img src="https://img.shields.io/badge/Java%20Swing-007396?style=for-the-badge&logo=java&logoColor=white"></a>
+  <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/rmi/"><img src="https://img.shields.io/badge/Java%20RMI-5382a1?style=for-the-badge&logo=java&logoColor=white"></a>
+  <a href="https://en.wikipedia.org/wiki/Comma-separated_values"><img src="https://img.shields.io/badge/CSV-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white"></a>
+</p>
 
-- **Chi tiết thông tin sinh viên**
+<p align="center">
+  <a href="https://www.eclipse.org/"><img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white"></a>
+  <a href="https://netbeans.apache.org/"><img src="https://img.shields.io/badge/NetBeans-1B6AC6?style=for-the-badge&logo=apache-netbeans-ide&logoColor=white"></a>
+</p>
 
-  <img width="600" height="350" alt="image" src="https://github.com/user-attachments/assets/4830bbc2-fe6b-44b2-9897-2339135b04c5" />
-  
-- **Học phần, thêm học phần**
+---
 
-  <img width="600" height="350" alt="image" src="https://github.com/user-attachments/assets/bbf6497a-42c6-4abc-8fd8-de041e03d2a2" />
+## 3. Hình ảnh các chức năng
 
-- **Điểm học phần**
+### 🔹 Giao diện chính (Java Swing)
+- Giao diện với hai tab: **Quản lý Sinh viên** (danh sách sinh viên với các nút chức năng Xem chi tiết, Sửa, Xóa) và **Quản lý Học Phần** (chọn học phần và cập nhật điểm số).
+- Hỗ trợ tìm kiếm theo tên hoặc ID, thêm sinh viên mới qua dialog.
+<p align="center">
+<img src="Images/GiaoDienChinh.png" alt="Giao diện chính" width="800"/>
+</p>
 
-  <img width="600" height="350" alt="image" src="https://github.com/user-attachments/assets/3a4ea00f-e05c-419a-b657-577f01af2d46" />
+### 🔹 Tab Quản lý Học Phần
+- Chọn học phần từ dropdown (ví dụ: Lập Trình Mạng, Kỹ Năng Mềm), hiển thị bảng điểm số (Chuyên cần, Kiểm tra 1, Điểm thi) và nút Cập nhật cho từng sinh viên.
+<p align="center">
+<img src="Images/QuanLyHocPhan.png" alt="Tab Quản lý Học Phần" width="800"/>
+</p>
 
-- **Chuyên cần**
+### 🔹 Thêm sinh viên mới
+- Dialog form nhập thông tin cơ bản (Mã SV, Họ tên, Năm sinh, Email, Lớp), với điểm mặc định 0 cho các học phần.
+<p align="center">
+<img src="Images/ThemSinhVien.png" alt="Thêm sinh viên mới" width="800"/>
+</p>
 
-  <img width="600" height="350" alt="image" src="https://github.com/user-attachments/assets/a33f6e9a-e72a-4526-8380-a64dc33e67ef" />
+### 🔹 Xem chi tiết sinh viên
+- Dialog read-only hiển thị đầy đủ thông tin sinh viên, bao gồm điểm số chi tiết cho từng học phần.
+<p align="center">
+<img src="Images/XemChiTietSinhVien.png" alt="Xem chi tiết sinh viên" width="800"/>
+</p>
 
-## 🏗️ 4. Kiến trúc hệ thống
-- **Server**: cung cấp dịch vụ quản lý sinh viên qua RMI  
-- **Client**: ứng dụng giao diện Swing gọi phương thức từ xa trên server  
-- **Student**: lớp đối tượng mô tả thông tin sinh viên (id, name, age, email)  
-- **StudentManagement**: interface định nghĩa các phương thức RMI  
-- **StudentManagementImpl**: cài đặt interface, xử lý dữ liệu  
+### 🔹 Cập nhật sinh viên
+- Dialog form chỉnh sửa thông tin cơ bản (Mã SV, Họ tên, Năm sinh, Email, Lớp).
+<p align="center">
+<img src="Images/CapNhatSinhVien.png" alt="Cập nhật sinh viên" width="800"/>
+</p>
 
-## 🎯 5. Mục tiêu học tập
-- Hiểu và triển khai mô hình Client/Server với RMI  
-- Biết cách đăng ký và sử dụng dịch vụ trong RMI Registry  
-- Thực hành gọi phương thức từ xa và xử lý lỗi trong ứng dụng phân tán  
+### 🔹 Cập nhật điểm số học phần
+- Dialog form cập nhật điểm cụ thể cho một học phần (Chuyên cần, Kiểm tra 1, Điểm thi).
+<p align="center">
+<img src="Images/CapNhatDiemSo.png" alt="Cập nhật điểm số" width="800"/>
+</p>
 
-## 📝 6. License
-Tài liệu và mã nguồn thuộc bản quyền của **AIoTLab, Khoa Công nghệ Thông tin, Đại học Đại Nam (DaiNam University)**.  
+---
 
-Người học được phép:
-- Sử dụng mã nguồn cho mục đích học tập và nghiên cứu.  
-- Chỉnh sửa và mở rộng để phục vụ bài tập, đồ án, hoặc nghiên cứu cá nhân.
+## 4. Các bước cài đặt
 
-## Thông tin cá nhân
-**Họ tên**: Phạm Trọng Toàn  
-**Lớp**: CNTT 16-01  
-**Email**: phamtrongtoank4@gmail.com
+### 🔹 1. Cài đặt môi trường
+- Cài **Java JDK 8+** (tải từ [Oracle](https://www.oracle.com/java/technologies/downloads/) hoặc OpenJDK).  
+- Không cần cơ sở dữ liệu bên ngoài vì sử dụng file CSV.  
 
-  
-© 2025 AIoTLab, Faculty of Information Technology, DaiNam University.
+### 🔹 2. Clone repository
+```sh
+git clone <repository_url>
+cd <repository_folder>
+```
+
+### 🔹 3. Biên dịch project
+Mở terminal tại thư mục dự án:
+```sh
+javac -d . src/rmi/student/*.java
+```
+(Lưu ý: Thay `src` bằng đường dẫn thư mục chứa code nếu cần.)
+
+Hoặc mở project trong IDE (IntelliJ, Eclipse) và build.
+
+---
+
+## 5. Chạy ứng dụng
+
+### 🔹 1. Khởi động Server
+Chạy lớp `ServerMain` để khởi tạo RMI Registry và đăng ký dịch vụ:
+```sh
+java rmi.student.ServerMain
+```
+- Server sẽ lắng nghe tại cổng 1099 (mặc định).
+- Dữ liệu được tải từ/tới file `students.csv`.
+
+### 🔹 2. Khởi động Client
+Chạy lớp `ClientGUI` để mở giao diện Swing:
+```sh
+java rmi.student.ClientGUI
+```
+- Client kết nối tới Server tại `rmi://localhost:1099/StudentManager`.
+- Nếu chạy trên mạng khác, thay `localhost` bằng IP Server trong mã nguồn ClientGUI.
+
+### 🔹 Lưu ý khi chạy
+- Chạy Server trước Client.
+- Đảm bảo không có firewall chặn cổng 1099.
+- Nếu lỗi kết nối, kiểm tra RMI Registry đang chạy.
+
+---
+
+## 6. Cấu trúc mã nguồn
+
+```
+project_root/
+├── rmi/
+│   └── student/
+│       ├── ServerMain.java         # Khởi động Server
+│       ├── StudentManager.java     # Interface RMI
+│       ├── StudentManagerImpl.java # Implement RMI, quản lý dữ liệu CSV
+│       ├── Student.java            # Model Sinh viên (với điểm số)
+│       └── ClientGUI.java          # Giao diện Client Swing
+│       └── students.csv          # File lưu dữ liệu (tạo tự động)
+└── README.md               # Tài liệu này
+```
+
+- **Student.java**: Lớp model với thông tin sinh viên và điểm (Toán, Văn, Anh).
+- **StudentManager**: Interface định nghĩa phương thức RMI (add, update, delete, get).
+- **StudentManagerImpl**: Triển khai lưu trữ HashMap và CSV.
+- **ServerMain**: Đăng ký RMI.
+- **ClientGUI**: Giao diện với JTabbedPane, JTable, dialog form.
+
+---
+
+## 7. Liên hệ
+- Email: nguyenconguan04@gmail.com
+
+---
+
+<div align="center">
+    <p>Developed by [Nguyen Cong Uan] - Faculty of Information Technology, DaiNam University</p>
+</div>
