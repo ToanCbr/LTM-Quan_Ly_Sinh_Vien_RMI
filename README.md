@@ -116,11 +116,8 @@ javac -d . src/rmi/student/*.java
 
 Hoặc mở project trong IDE (IntelliJ, Eclipse) và build.
 
----
 
-## 5. Chạy ứng dụng
-
-### 🔹 1. Khởi động Server
+### 🔹 4. Khởi động Server
 Chạy lớp `ServerMain` để khởi tạo RMI Registry và đăng ký dịch vụ:
 ```sh
 java rmi.student.ServerMain
@@ -128,7 +125,7 @@ java rmi.student.ServerMain
 - Server sẽ lắng nghe tại cổng 1099 (mặc định).
 - Dữ liệu được tải từ/tới file `students.csv`.
 
-### 🔹 2. Khởi động Client
+### 🔹 5. Khởi động Client
 Chạy lớp `ClientGUI` để mở giao diện Swing:
 ```sh
 java rmi.student.ClientGUI
@@ -143,7 +140,8 @@ java rmi.student.ClientGUI
 
 ---
 
-## 6. Liên hệ
+## 5. Liên hệ
+- Name: Phạm Trọng Toàn
 - Email: phamtrongtoank4@gmail.com
 
 ---
