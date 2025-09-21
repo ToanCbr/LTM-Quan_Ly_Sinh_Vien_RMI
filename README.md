@@ -133,7 +133,7 @@ java rmi.student.ClientGUI
 - Client kết nối tới Server tại `rmi://localhost:1099/StudentManager`.
 - Nếu chạy trên mạng khác, thay `localhost` bằng IP Server trong mã nguồn ClientGUI.
 
-### 🔹 Lưu ý khi chạy
+### 🔹 6. Lưu ý khi chạy
 - Chạy Server trước Client.
 - Đảm bảo không có firewall chặn cổng 1099.
 - Nếu lỗi kết nối, kiểm tra RMI Registry đang chạy.
